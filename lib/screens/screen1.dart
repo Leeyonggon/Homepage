@@ -16,7 +16,9 @@ class MScreen extends StatelessWidget {
       backgroundColor: Colors.black,
       body: Stack(
         alignment: Alignment.topCenter,
-        children: [],
+        children: [
+          Text('First Page'),
+        ],
       ),
     );
   }
