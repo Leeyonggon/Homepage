@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'dart:js' as js;
+
 class Introduce extends StatefulWidget {
   const Introduce({super.key});
 
@@ -44,11 +46,19 @@ class _IntroduceState extends State<Introduce> {
             ),
             Container(
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
+                  const SizedBox(
+                    width: 50,
+                  ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      js.context.callMethod(
+                          "open", ['https://github.com/Leeyonggon']);
+                    },
                     child: Image.asset(
                       'assets/github-mark-white.png',
+                      width: 20,
                     ),
                   ),
                 ],
