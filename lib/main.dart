@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:website/screens/MainScreen.dart';
+import 'package:website/screens/First/MainScreen.dart';
 import 'package:get/get.dart';
 
 void main() {

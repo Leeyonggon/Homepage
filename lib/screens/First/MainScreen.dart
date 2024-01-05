@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:website/screens/First/Introduce.dart';
 
 late double height;
 late double width;
@@ -22,7 +24,9 @@ class MScreen extends StatelessWidget {
         children: [
           SingleChildScrollView(
             controller: Vscroll,
-            child: const Column() //추후에 가로 Scroll은 Hscroll을 사용
+            child: const Column(
+              children: [Introduce()],
+            ) //추후에 가로 Scroll은 Hscroll을 사용
             ,
           ),
         ],
