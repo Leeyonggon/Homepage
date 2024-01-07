@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -25,8 +26,8 @@ class _IntroduceState extends State<Introduce> {
               const EdgeInsets.only(left: 30, top: 20, right: 30, bottom: 20),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15), color: Colors.black),
-          height: 200,
-          width: 250,
+          height: 320,
+          width: 320,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,34 +36,77 @@ class _IntroduceState extends State<Introduce> {
               height: 30,
             ),
             Text(
-              " \t\t\t\t Develop Developer  \n   \t\t    Gon Page",
+              " \t\t\t\t Develop Developer  \n   \t\t\t    Gon Page",
               style: GoogleFonts.lato(
                 color: Colors.blue,
                 fontSize: 20,
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  const SizedBox(
-                    width: 50,
+            Row(
+              children: [
+                const SizedBox(
+                  width: 30,
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.asset(
+                            'gons.jpg',
+                            width: 120,
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            // email등 추가할것 추가
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              const SizedBox(
+                                width: 30,
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  js.context.callMethod("open",
+                                      ['https://github.com/Leeyonggon']);
+                                },
+                                child: Image.asset(
+                                  'assets/github-mark-white.png',
+                                  width: 20,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      const Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              '이름 : 이용곤',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text('직업 : 휴학생',
+                                style: TextStyle(color: Colors.white)),
+                            Text("Introduce :",
+                                style: TextStyle(color: Colors.white)),
+                            Text('Flutter를 연습중입니다',
+                                style: TextStyle(color: Colors.white)),
+                          ]),
+                    ],
                   ),
-                  InkWell(
-                    onTap: () {
-                      js.context.callMethod(
-                          "open", ['https://github.com/Leeyonggon']);
-                    },
-                    child: Image.asset(
-                      'assets/github-mark-white.png',
-                      width: 20,
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),
