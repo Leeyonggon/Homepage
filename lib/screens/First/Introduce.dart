@@ -22,18 +22,19 @@ class _IntroduceState extends State<Introduce> {
       alignment: Alignment.topLeft,
       children: [
         Container(
+          margin: const EdgeInsets.only(top: 5),
           padding:
               const EdgeInsets.only(left: 30, top: 20, right: 30, bottom: 20),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15), color: Colors.black),
-          height: 320,
+          height: 300,
           width: 320,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 30,
+              height: 10,
             ),
             Text(
               " \t\t\t\t Develop Developer  \n   \t\t\t    Gon Page",
@@ -58,7 +59,7 @@ class _IntroduceState extends State<Introduce> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Image.asset(
-                            'gons.jpg',
+                            'assets/gons.jpg',
                             width: 120,
                           ),
                           const SizedBox(
@@ -98,8 +99,7 @@ class _IntroduceState extends State<Introduce> {
                             ),
                             Text('직업 : 휴학생',
                                 style: TextStyle(color: Colors.white)),
-                            Text("Introduce :",
-                                style: TextStyle(color: Colors.white)),
+                            Text("설명 :", style: TextStyle(color: Colors.white)),
                             Text('Flutter를 연습중입니다',
                                 style: TextStyle(color: Colors.white)),
                           ]),
