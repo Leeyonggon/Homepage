@@ -12,6 +12,8 @@ class ShowProduct extends StatefulWidget {
 class _ShowProductState extends State<ShowProduct> {
   @override
   Widget build(BuildContext context) {
+    double h = MediaQuery.of(context).size.height;
+    double w = MediaQuery.of(context).size.width;
     return Stack(
       children: [
         Container(
@@ -20,7 +22,7 @@ class _ShowProductState extends State<ShowProduct> {
               const EdgeInsets.only(left: 30, top: 20, right: 30, bottom: 20),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15), color: Colors.black),
-          height: 300,
+          height: h,
           width: 320,
         )
       ],

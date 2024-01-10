@@ -47,61 +47,64 @@ class _IntroduceState extends State<Introduce> {
             const SizedBox(
               height: 20,
             ),
-            Row(
-              // Row 범위를 잡지 못해서? Row 주석 처리시 원하는대로 작동
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(
-                  width: 30,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                Row(
+                  // Row 범위를 잡지 못해서? Row 주석 처리시 원하는대로 작동
                   children: [
-                    Image.asset(
-                      'assets/gons.jpg',
-                      width: 120,
-                    ),
                     const SizedBox(
-                      height: 10,
+                      width: 30,
                     ),
-                    Row(
-                      // email등 추가할것 추가
-                      mainAxisAlignment: MainAxisAlignment.start,
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(
-                          width: 30,
+                        Image.asset(
+                          'assets/gons.jpg',
+                          width: 120,
                         ),
-                        InkWell(
-                          onTap: () {
-                            js.context.callMethod(
-                                "open", ['https://github.com/Leeyonggon']);
-                          },
-                          child: Image.asset(
-                            'assets/github-mark-white.png',
-                            width: 20,
-                          ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          // email등 추가할것 추가
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            const SizedBox(
+                              width: 30,
+                            ),
+                            InkWell(
+                              onTap: () {
+                                js.context.callMethod(
+                                    "open", ['https://github.com/Leeyonggon']);
+                              },
+                              child: Image.asset(
+                                'assets/github-mark-white.png',
+                                width: 20,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '이름 : 이용곤',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          Text('직업 : 휴학생',
+                              style: TextStyle(color: Colors.white)),
+                          Text("설명 :", style: TextStyle(color: Colors.white)),
+                          Text('Flutter를 연습중입니다',
+                              style: TextStyle(color: Colors.white)),
+                        ]),
                   ],
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
-                const Expanded(
-                  flex: 1,
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          '이름 : 이용곤',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        Text('직업 : 휴학생', style: TextStyle(color: Colors.white)),
-                        Text("설명 :", style: TextStyle(color: Colors.white)),
-                        Text('Flutter를 연습중입니다',
-                            style: TextStyle(color: Colors.white)),
-                      ]),
                 ),
               ],
             ),
