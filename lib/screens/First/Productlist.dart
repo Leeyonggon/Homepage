@@ -22,17 +22,17 @@ class _ProductListState extends State<ProductList> {
               const EdgeInsets.only(left: 30, top: 20, right: 30, bottom: 20),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15), color: Colors.black),
-          height: 300,
+          height: 500,
           width: 320,
         ),
         const Column(
           children: [
             SizedBox(
-              height: 10,
+              height: 20,
             ),
             Text(
-              'data',
-              style: TextStyle(color: Colors.white),
+              'Product List',
+              style: TextStyle(color: Colors.blue, fontSize: 18),
             )
           ],
         )

@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:website/screens/First/Introduce.dart';
-import 'package:website/screens/First/list.dart';
+import 'package:website/screens/First/Productlist.dart';
+import 'package:website/screens/First/showproduct.dart';
 
 late double height;
 late double width;
