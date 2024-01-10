@@ -48,6 +48,7 @@ class _IntroduceState extends State<Introduce> {
               height: 20,
             ),
             Row(
+              // Row 범위를 잡지 못해서? Row 주석 처리시 원하는대로 작동
               children: [
                 const SizedBox(
                   width: 30,
