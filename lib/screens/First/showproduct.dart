@@ -17,13 +17,13 @@ class _ShowProductState extends State<ShowProduct> {
     return Stack(
       children: [
         Container(
-          margin: const EdgeInsets.only(top: 5),
+          margin: const EdgeInsets.all(10.0),
           padding:
               const EdgeInsets.only(left: 30, top: 20, right: 30, bottom: 20),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15), color: Colors.black),
           height: h,
-          width: 320,
+          width: 1200,
         )
       ],
     );

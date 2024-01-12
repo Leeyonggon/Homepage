@@ -25,13 +25,15 @@ class MScreen extends StatelessWidget {
         children: [
           SingleChildScrollView(
             controller: Vscroll,
-            child: const Column(
+            child: const Row(
               children: [
-                Introduce(),
-                Row(
-                  children: [
-                    ProductList(),
-                  ],
+                Column(
+                  children: [Introduce(), ProductList()],
+                ),
+                Expanded(
+                  child: Column(
+                    children: [ShowProduct()],
+                  ),
                 ),
               ],
             ) //추후에 가로 Scroll은 Hscroll을 사용
