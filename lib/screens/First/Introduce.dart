@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/services.dart';
 
 import 'dart:js' as js;
 
@@ -82,6 +84,26 @@ class _IntroduceState extends State<Introduce> {
                                 'assets/github-mark-white.png',
                                 width: 20,
                               ),
+                            ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            InkWell(
+                              onTap: () {
+                                Clipboard.setData(
+                                  const ClipboardData(
+                                      text: 'gong1752@icloud.com'),
+                                );
+                                Get.closeAllSnackbars();
+                                Get.snackbar('이메일 주소가 클립보드에 저장되었습니다!',
+                                    'gong1752@icloud.com',
+                                    backgroundColor: Colors.white,
+                                    snackPosition: SnackPosition.BOTTOM,
+                                    forwardAnimationCurve: Curves.easeIn,
+                                    reverseAnimationCurve: Curves.easeOut);
+                              },
+                              child: const Icon(Icons.mail,
+                                  color: Colors.white, size: 20),
                             ),
                           ],
                         ),
