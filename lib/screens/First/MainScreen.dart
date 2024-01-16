@@ -11,8 +11,8 @@ late double width;
 class MScreen extends StatelessWidget {
   MScreen({super.key});
 
-  ScrollController Vscroll = ScrollController();
-  ScrollController Hscroll = ScrollController();
+  ScrollController VScroll = ScrollController();
+  ScrollController HScroll = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -24,15 +24,25 @@ class MScreen extends StatelessWidget {
         alignment: Alignment.topLeft,
         children: [
           SingleChildScrollView(
-            controller: Vscroll,
-            child: const Row(
+            controller: VScroll,
+            scrollDirection: Axis.vertical,
+            child: Row(
               children: [
-                Column(
+                Container(
+                  child: const SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                  ),
+                ),
+                const Column(
                   children: [Introduce(), ProductList()],
                 ),
                 Expanded(
                   child: Column(
-                    children: [ShowProduct()],
+                    children: [
+                      ShowProduct(
+                        HScorll: HScroll,
+                      )
+                    ],
                   ),
                 ),
               ],

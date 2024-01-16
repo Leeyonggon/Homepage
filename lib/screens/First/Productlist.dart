@@ -25,7 +25,7 @@ class _ProductListState extends State<ProductList> {
               const EdgeInsets.only(left: 30, top: 20, right: 30, bottom: 20),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15), color: Colors.black),
-          height: 500,
+          height: h - 300,
           width: 320,
         ),
         const Column(

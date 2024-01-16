@@ -3,7 +3,8 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
 class ShowProduct extends StatefulWidget {
-  const ShowProduct({super.key});
+  const ShowProduct({super.key, required this.HScorll});
+  final ScrollController HScorll;
 
   @override
   State<ShowProduct> createState() => _ShowProductState();
@@ -23,7 +24,7 @@ class _ShowProductState extends State<ShowProduct> {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15), color: Colors.black),
           height: h,
-          width: 1200,
+          width: w - 320,
         )
       ],
     );

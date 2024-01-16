@@ -40,7 +40,7 @@ class _IntroduceState extends State<Introduce> {
               height: 10,
             ),
             Text(
-              " \t\t\t\t Develop Developer  \n   \t\t\t    Gon Page",
+              " \t\t\t\t\t\t\t\t\t        Develop Developer  \n                   \t      Gon Page",
               style: GoogleFonts.lato(
                 color: Colors.blue,
                 fontSize: 20,
