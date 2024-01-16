@@ -34,16 +34,24 @@ class _IntroduceState extends State<Introduce> {
           width: 320,
         ),
         Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(
               height: 10,
             ),
-            Text(
-              " \t\t\t\t\t\t\t\t\t        Develop Developer  \n                   \t      Gon Page",
-              style: GoogleFonts.lato(
-                color: Colors.blue,
-                fontSize: 20,
+            Container(
+              width: 320,
+              height: 70,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  border:
+                      const Border(bottom: BorderSide(color: Colors.white))),
+              child: Text(
+                " \t\t\t\t\t\t\t  Develop Developer  \n         \t\t     Gon Page",
+                style: GoogleFonts.righteous(
+                  color: const Color.fromARGB(255, 0, 102, 255),
+                  fontSize: 20,
+                ),
               ),
             ),
             const SizedBox(
@@ -112,19 +120,34 @@ class _IntroduceState extends State<Introduce> {
                     const SizedBox(
                       width: 20,
                     ),
-                    const Column(
+                    Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             '이름 : 이용곤',
-                            style: TextStyle(color: Colors.white),
+                            style: GoogleFonts.jua(
+                              color: const Color.fromARGB(255, 255, 255, 255),
+                            ),
                           ),
-                          Text('직업 : 휴학생',
-                              style: TextStyle(color: Colors.white)),
-                          Text("설명 :", style: TextStyle(color: Colors.white)),
-                          Text('Flutter를 연습중입니다',
-                              style: TextStyle(color: Colors.white)),
+                          Text(
+                            '직업 : 휴학생',
+                            style: GoogleFonts.jua(
+                              color: const Color.fromARGB(255, 255, 255, 255),
+                            ),
+                          ),
+                          Text(
+                            "설명 :",
+                            style: GoogleFonts.jua(
+                              color: const Color.fromARGB(255, 255, 255, 255),
+                            ),
+                          ),
+                          Text(
+                            'Flutter를 연습중입니다',
+                            style: GoogleFonts.jua(
+                              color: const Color.fromARGB(255, 255, 255, 255),
+                            ),
+                          ),
                         ]),
                   ],
                 ),

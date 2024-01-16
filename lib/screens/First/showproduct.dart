@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:website/screens/First/component.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ShowProduct extends StatefulWidget {
   const ShowProduct({super.key, required this.HScorll});
@@ -39,13 +40,16 @@ class _ShowProductState extends State<ShowProduct> {
           height: h,
           width: w - 320,
         ),
-        const Column(children: [
-          SizedBox(
+        Column(children: [
+          const SizedBox(
             height: 15,
           ),
           Text(
             'Projects',
-            style: TextStyle(color: Colors.blue, fontSize: 20),
+            style: GoogleFonts.righteous(
+              color: Colors.white,
+              fontSize: 40,
+            ),
           ),
         ]),
         //const Exhibition(),

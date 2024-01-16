@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/services.dart';
 
 class ProductList extends StatefulWidget {
   const ProductList({super.key});
@@ -28,14 +30,26 @@ class _ProductListState extends State<ProductList> {
           height: h - 300,
           width: 320,
         ),
-        const Column(
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Text(
-              'Product List',
-              style: TextStyle(color: Colors.blue, fontSize: 18),
+            Container(
+              width: 320,
+              height: 40,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  border:
+                      const Border(bottom: BorderSide(color: Colors.white))),
+              child: Text(
+                ' \t\t\t\t\t\t\t      Product List',
+                style: GoogleFonts.righteous(
+                  color: const Color.fromARGB(255, 0, 102, 255),
+                  fontSize: 20,
+                ),
+              ),
             )
           ],
         )
