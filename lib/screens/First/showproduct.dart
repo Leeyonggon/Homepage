@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:website/screens/First/component.dart';
+import 'package:website/screens/First/inside/component.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ShowProduct extends StatefulWidget {
@@ -40,18 +40,25 @@ class _ShowProductState extends State<ShowProduct> {
           height: h,
           width: w - 320,
         ),
-        Column(children: [
-          const SizedBox(
-            height: 15,
+        Container(
+          width: w - 340,
+          height: 80,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(2),
+            border: const Border(bottom: BorderSide(color: Colors.white)),
           ),
-          Text(
-            'Projects',
-            style: GoogleFonts.righteous(
-              color: Colors.white,
-              fontSize: 40,
+          child: Column(children: [
+            const SizedBox(
+              height: 15,
             ),
-          ),
-        ]),
+            Text('Projects',
+                style: GoogleFonts.righteous(
+                  color: Colors.white,
+                  fontSize: 40,
+                ),
+                textAlign: TextAlign.center),
+          ]),
+        ),
         //const Exhibition(),
       ],
     );

@@ -44,7 +44,7 @@ class _ProductListState extends State<ProductList> {
                   border:
                       const Border(bottom: BorderSide(color: Colors.white))),
               child: Text(
-                ' \t\t\t\t\t\t\t      Product List',
+                ' \t\t\t\t\t\t\t        Product List',
                 style: GoogleFonts.righteous(
                   color: const Color.fromARGB(255, 0, 102, 255),
                   fontSize: 20,
