@@ -41,8 +41,8 @@ class _ProductListState extends State<ProductList> {
               height: 40,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
-                  border:
-                      const Border(bottom: BorderSide(color: Colors.white))),
+                  border: const Border(
+                      bottom: BorderSide(color: Colors.white, width: 2))),
               child: Text(
                 ' \t\t\t\t\t\t\t        Product List',
                 style: GoogleFonts.righteous(

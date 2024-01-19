@@ -45,7 +45,8 @@ class _ShowProductState extends State<ShowProduct> {
           height: 80,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(2),
-            border: const Border(bottom: BorderSide(color: Colors.white)),
+            border:
+                const Border(bottom: BorderSide(color: Colors.white, width: 2)),
           ),
           child: Column(children: [
             const SizedBox(
@@ -53,7 +54,7 @@ class _ShowProductState extends State<ShowProduct> {
             ),
             Text('Projects',
                 style: GoogleFonts.righteous(
-                  color: Colors.white,
+                  color: const Color.fromARGB(255, 0, 102, 255),
                   fontSize: 40,
                 ),
                 textAlign: TextAlign.center),

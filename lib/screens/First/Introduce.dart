@@ -44,8 +44,8 @@ class _IntroduceState extends State<Introduce> {
               height: 70,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
-                  border:
-                      const Border(bottom: BorderSide(color: Colors.white))),
+                  border: const Border(
+                      bottom: BorderSide(color: Colors.white, width: 2))),
               child: Text(
                 " \t\t\t\t\t\t\t    Develop Developer  \n         \t\t       Gon Page",
                 style: GoogleFonts.righteous(
