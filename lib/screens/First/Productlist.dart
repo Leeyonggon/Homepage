@@ -21,7 +21,8 @@ class _ProductListState extends State<ProductList> {
     return Stack(
       alignment: Alignment.topCenter,
       children: [
-        Container(
+        AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
           margin: const EdgeInsets.only(top: 10),
           padding:
               const EdgeInsets.only(left: 30, top: 20, right: 30, bottom: 20),

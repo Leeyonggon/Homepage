@@ -31,7 +31,8 @@ class _ShowProductState extends State<ShowProduct> {
     return Stack(
       alignment: Alignment.topCenter,
       children: [
-        Container(
+        AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
           margin: const EdgeInsets.all(10.0),
           padding:
               const EdgeInsets.only(left: 30, top: 20, right: 30, bottom: 20),
@@ -40,26 +41,29 @@ class _ShowProductState extends State<ShowProduct> {
           height: h,
           width: w - 320,
         ),
-        Container(
-          width: w - 340,
-          height: 80,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(2),
-            border:
-                const Border(bottom: BorderSide(color: Colors.white, width: 2)),
+        Column(children: [
+          const SizedBox(
+            height: 15,
           ),
-          child: Column(children: [
-            const SizedBox(
-              height: 15,
-            ),
-            Text('Projects',
-                style: GoogleFonts.righteous(
-                  color: const Color.fromARGB(255, 0, 102, 255),
-                  fontSize: 40,
-                ),
-                textAlign: TextAlign.center),
-          ]),
-        ),
+          Text('Projects',
+              style: GoogleFonts.righteous(
+                color: const Color.fromARGB(255, 0, 102, 255),
+                fontSize: 40,
+              ),
+              textAlign: TextAlign.center),
+          const SizedBox(
+            height: 20,
+          ),
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 200),
+            height: h - 95,
+            width: w - 360,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(4),
+                border: Border.all(color: Colors.white, width: 2)),
+          ),
+        ]),
+
         //const Exhibition(),
       ],
     );

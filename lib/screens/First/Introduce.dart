@@ -19,15 +19,14 @@ class Introduce extends StatefulWidget {
 class _IntroduceState extends State<Introduce> {
   @override
   Widget build(BuildContext context) {
-    //double h = MediaQuery.of(context).size.height;
-    //double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
+    double w = MediaQuery.of(context).size.width;
     return Stack(
       alignment: Alignment.topLeft,
       children: [
         Container(
-          margin: const EdgeInsets.only(top: 5),
           padding:
-              const EdgeInsets.only(left: 30, top: 20, right: 30, bottom: 20),
+              const EdgeInsets.only(left: 30, top: 0, right: 30, bottom: 20),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15), color: Colors.black),
           height: 300,
