@@ -60,13 +60,13 @@ class _IntroduceState extends State<Introduce> {
             ),
             Container(
               width: 320,
-              height: 70,
+              height: 40,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
                   border: const Border(
                       bottom: BorderSide(color: Colors.white, width: 2))),
               child: Text(
-                " \t\t\t\t\t\t\t    Develop Developer  \n         \t\t       Gon Page",
+                " \t\t\t\t\t\t\t           Introduce",
                 style: GoogleFonts.righteous(
                   color: const Color.fromARGB(255, 0, 102, 255),
                   fontSize: 20,
@@ -74,7 +74,7 @@ class _IntroduceState extends State<Introduce> {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 40,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -179,9 +179,16 @@ class _IntroduceState extends State<Introduce> {
   }
 }
 
+//import 'package:just_audio/just_audio.dart';
 
+// final player = AudioPlayer();
 
+// Future playAudio() async {
+//   final duration = await player.setAsset("assets/audio/piano.mp3");
+//   await player.play();
+// } 
 
+// 배경 음악 실행 다른 코드 *함수로 만들어서 initState()에서 playAudio(); 사용
 
 /*Stack(
           alignment: AlignmentDirectional.center,

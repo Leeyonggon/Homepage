@@ -5,8 +5,6 @@ import 'package:website/screens/First/Introduce.dart';
 import 'package:website/screens/First/Productlist.dart';
 import 'package:website/screens/First/showproduct.dart';
 
-import 'package:assets_audio_player/assets_audio_player.dart';
-
 late double height;
 late double width;
 
