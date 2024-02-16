@@ -24,8 +24,8 @@ class _ProductListState extends State<ProductList> {
         AnimatedContainer(
           duration: const Duration(milliseconds: 200),
           margin: const EdgeInsets.only(top: 10),
-          padding:
-              const EdgeInsets.only(left: 30, top: 20, right: 30, bottom: 20),
+          // padding:
+          //     const EdgeInsets.only(left: 30, top: 20, right: 30, bottom: 20),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15), color: Colors.black),
           height: h - 300,
@@ -35,7 +35,7 @@ class _ProductListState extends State<ProductList> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             Container(
               width: 320,

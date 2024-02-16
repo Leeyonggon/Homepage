@@ -7,6 +7,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
 
+import 'package:assets_audio_player/assets_audio_player.dart';
+
 import 'dart:js' as js;
 
 class Introduce extends StatefulWidget {
@@ -17,6 +19,22 @@ class Introduce extends StatefulWidget {
 }
 
 class _IntroduceState extends State<Introduce> {
+  late final AssetsAudioPlayer _assetsAudioPlayer =
+      AssetsAudioPlayer.newPlayer();
+
+  @override
+  void initState() {
+    super.initState();
+
+    _assetsAudioPlayer.open(Audio("assets/audio/piano.mp3"),
+        loopMode: LoopMode.single, //반복여부 (.none):없음
+        autoStart: true // 자동시작
+        );
+    _assetsAudioPlayer.play();
+    _assetsAudioPlayer.pause();
+    _assetsAudioPlayer.stop();
+  }
+
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
@@ -24,9 +42,11 @@ class _IntroduceState extends State<Introduce> {
     return Stack(
       alignment: Alignment.topLeft,
       children: [
-        Container(
-          padding:
-              const EdgeInsets.only(left: 30, top: 0, right: 30, bottom: 20),
+        AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          margin: const EdgeInsets.only(top: 10),
+          // padding:
+          //     const EdgeInsets.only(left: 30, top: 0, right: 30, bottom: 20),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15), color: Colors.black),
           height: 300,
