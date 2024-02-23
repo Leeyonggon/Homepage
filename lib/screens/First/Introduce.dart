@@ -31,8 +31,8 @@ class _IntroduceState extends State<Introduce> {
         autoStart: true // 자동시작
         );
     _assetsAudioPlayer.play();
-    _assetsAudioPlayer.pause();
-    _assetsAudioPlayer.stop();
+    // _assetsAudioPlayer.pause();
+    // _assetsAudioPlayer.stop();
   }
 
   @override
