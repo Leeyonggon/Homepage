@@ -26,13 +26,22 @@ class _IntroduceState extends State<Introduce> {
   void initState() {
     super.initState();
 
-    _assetsAudioPlayer.open(Audio("assets/audio/piano.mp3"),
-        loopMode: LoopMode.single, //반복여부 (.none):없음
-        autoStart: true // 자동시작
-        );
+    _assetsAudioPlayer.open(
+      Audio("assets/audio/piano.mp3"),
+      loopMode: LoopMode.single, //반복여부 (.none):없음
+      autoStart: true, // 자동시작
+      //volume: 5,
+    );
+
     _assetsAudioPlayer.play();
     // _assetsAudioPlayer.pause();
     // _assetsAudioPlayer.stop();
+  }
+
+  @override
+  void dispose() {
+    _assetsAudioPlayer.dispose();
+    super.dispose();
   }
 
   @override
